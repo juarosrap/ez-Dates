@@ -28,6 +28,8 @@ const photoRenderer = {
         return newCard;
     },
 
+    
+
     asDetails: function (photo) {
         let html = `<div class="photo-details">
         <h3>${photo.nombre}</h3>
