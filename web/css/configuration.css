@@ -1,0 +1,45 @@
+body{
+    height:100%;
+}
+h2{
+    font-weight: bolder;
+    color: #898dbf;
+}
+
+form{
+    width:550px;
+}
+
+form *{
+    font-weight: bold;
+}
+
+form label{
+    font-size: 18px;
+    color:#8f9096;
+}
+
+form .form-control,form .form-control:focus{
+    border-color:transparent;
+    border-bottom-color: #bebcc1;
+    box-shadow:none;
+}
+
+form .btn{ 
+    border-radius: 0px;
+    border-color: transparent;
+}
+
+.btn.btn-default{
+    background: #ebebeb;
+    color:#8f9096;
+}
+
+.btn.btn-primary{
+    background: #6c63ff;
+    color:white;
+}
+
+img{
+    border-radius: 75%;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="images\favicon-16x16.png"/>
+    <link rel="stylesheet" href="/css/chat.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script src="/js/libs/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/libs/axios.min.js"></script>
+    <title>Ez-Dates</title>
+</head>
+
+<body class="dark">
+
+    <!-- barra de navegacion -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <img src="web\images\pngwing.com.png" width="30" height="30" align="right" />
+          <a class="navbar-brand" href="index.html">Ez-Dates</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="chat.html">Mensajes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="notificaciones.html">Notificaciones</a>
+              </li>
+            </ul>
+        </div>
+
+          
+          </div>
+           <a href="configuration.html"><button class="boton" type="button">My account</button></a> 
+        </div>
+    </nav>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <div class="container">
+    <div class="row clearfix">
+        <div class="col-lg-12">
+            <div class="card chat-app">
+                <div id="plist" class="people-list">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-search"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Search...">
+                    </div>
+                    <ul class="list-unstyled chat-list mt-2 mb-0">
+                        <li class="clearfix">
+                            <img src="web\images\JUAN.png" alt="avatar">
+                            <div class="about">
+                                <div class="name">Juan Ros</div>
+                                <div class="status"> <i class="fa fa-circle offline"></i> left 7 mins ago </div>                                            
+                            </div>
+                        </li>
+                        <li class="clearfix active">
+                            <img src="web\images\PABLO.png" alt="avatar">
+                            <div class="about">
+                                <div class="name">Pablo Suarez</div>
+                                <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <img src="web\images\DANI.png" alt="avatar">
+                            <div class="about">
+                                <div class="name">Daniel Taillefer</div>
+                                <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                            </div>
+                        </li>                                    
+                        <li class="clearfix">
+                            <img src="web\images\DOMI.png" alt="avatar">
+                            <div class="about">
+                                <div class="name">Domingo Morales</div>
+                                <div class="status"> <i class="fa fa-circle offline"></i> left 10 hours ago </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <img src="web\images\JOSEMA.png" alt="avatar">
+                            <div class="about">
+                                <div class="name">Josema Rodríguez</div>
+                                <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <img src="web\images\JESÚS.png" alt="avatar">
+                            <div class="about">
+                                <div class="name">Jesús Aznar</div>
+                                <div class="status"> <i class="fa fa-circle offline"></i> offline since Oct 28 </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="chat">
+                    <div class="chat-header clearfix">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
+                                    <img src="web\images\JUAN.png" alt="avatar">
+                                </a>
+                                <div class="chat-about">
+                                    <h6 class="m-b-0">Juan Ros</h6>
+                                    <small>left 7 mins ago</small>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 hidden-sm text-right">
+                                <a href="javascript:void(0);" class="btn btn-outline-secondary"><i class="fa fa-camera"></i></a>
+                                <a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-image"></i></a>
+                                <a href="javascript:void(0);" class="btn btn-outline-info"><i class="fa fa-cogs"></i></a>
+                                <a href="javascript:void(0);" class="btn btn-outline-warning"><i class="fa fa-question"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-history">
+                        <ul class="m-b-0">
+                            <li class="clearfix">
+                                <div class="message-data text-right">
+                                    <span class="message-data-time">10:10 AM, Today</span>
+                                    <img src="web\images\JUAN.png" alt="avatar">
+                                </div>
+                                <div class="message other-message float-right"> Hola Juan, como estás? </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="message-data">
+                                    <span class="message-data-time">10:12 AM, Today</span>
+                                </div>
+                                <div class="message my-message">Muy bien Lola, y tú?</div>                                    
+                            </li>                
+                            <li class="clearfix">
+                                <div class="message-data">
+                                    <span class="message-data-time">10:13 AM, Today</span>
+                                </div>
+                                <div class="message my-message">Te parece si quedamos hoy?</div>                                    
+                            </li>  
+                            <li class="clearfix">
+                                <div class="message-data text-right">
+                                    <span class="message-data-time">10:15 AM, Today</span>
+                                    
+                                </div>
+                                <div class="message other-message float-right"> Por mí perfecto. Nos vemos en altozano a las 7 de la tarde.</div>
+                            </li>                              
+                            
+                        </ul>
+                    </div>
+                    <div class="chat-message clearfix">
+                        <div class="input-group mb-0">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-send"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Enter text here...">                                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+        
+</body>

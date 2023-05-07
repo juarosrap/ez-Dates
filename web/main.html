@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="images\favicon-16x16.png"/>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script src="/js/libs/bootstrap.min.js"></script>
+    <script src="/js/renderers/photos.js" type="module"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/renderers/gallery.js" type="module"></script>
+    <script src="js/index.js" type="module"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <title>Ez-Dates</title>
+</head>
+
+<body class="dark">
+
+    <!-- barra de navegacion -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <img src="web\images\pngwing.com.png" width="30" height="30" align="right" />
+          <a class="navbar-brand" href="index.html">Ez-Dates</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="chat.html">Mensajes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="notificaciones.html">Notificaciones</a>
+              </li>
+            </ul>
+        </div>
+
+          <div class="buscador">
+            <form id="form" role="search">
+                <input type="search" id="query" name="q"
+                 placeholder="Search..."
+                 aria-label="Search through site content">
+            </form>
+          </div>
+            <a href="configuration.html"><button class="boton" type="button">My account</button></a> 
+        </div>
+    </nav>
+
+       <!-- botones filtrado hombres,mujeres -->
+        <div class="container-boton" aria-label="Basic checkbox toggle button group">
+            <a href="filtrado.html"><button class="boton-f">Filtrar</button></a>
+        </div>
+            
+        <div class="container-boton" aria-label="Basic checkbox toggle button group">
+          <a href="edit_photo.html"><button class="boton-f">Añadir foto</button></a>
+      </div>
+
+    <!-- galeria fotos -->
+    <div class="photo-gallery" id="gallery">
+      <div id="errors"></div>
+        <div class="row">
+            <div class="col-md-4">
+                
+            </div>
+        </div>
+    </div>
+        

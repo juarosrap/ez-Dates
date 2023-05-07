@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <script src="/js/libs/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="/js/register.js" type="module"></script>
+  <script src="/js/libs/axios.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display =swap" rel="stylesheet">
+  <title>Ez-Dates</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a href="index.html"><img src="web\images\pngwing.com.png" width="30" height="30" align="right" /></a>
+      <a class="navbar-brand" href="index.html">Ez-Dates</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Ayuda
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">FAQs</a></li>
+              <li><a class="dropdown-item" href="#">Contacto</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="errors">
+    
+  </div>
+
+  <div class="formulario-container">
+    <form class="rowg-3" id="register-form">
+      <div class="col-md-6">
+        <label for="Nombre" class="form-label">Nombre completo</label>
+        <input type="text" class="form-control" id="Nombre" name="nombre" placeholder="Domingo Morales Calderón" required>
+      </div>
+      <div class="col-md-3">
+        <label for="FechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+        <input type="date" class="form-control" id="FechaNacimiento" name="fechaNacimiento" max="2023-03-18" min="1900-01-01" required>
+      </div>
+      <div class="col-md-2">
+        <label for="Estatura" class="form-label">Estatura (en centímetros)</label>
+        <input type="number" class="form-control" id="Estatura" name="estatura" max="400" min="0" required>
+      </div>
+      <div class="col-md-2">
+        <label for="Peso" class="form-label">Peso (en kilogramos)</label>
+        <input type="number" class="form-control" id="Peso" name="peso" max="1000" min="0" required>
+      </div> 
+
+      <div class="col-md-6">
+        <label for="inputPassword6" class="col-form-label">Password</label>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <input type="password" id="inputPassword6" class="form-control" name="contrasenya" aria-describedby="passwordHelpInline"
+              placeholder="1mp0s1bl3D3sc1fr4ar" required>
+          </div>
+          <div class="col-auto">
+            <span id="passwordHelpInline" class="form-text">Debe tener entre 5-18 caracteres</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="inputState" class="form-label">Género</label>
+        <select id="inputState" class="form-select">
+          <option selected>Otros</option>
+          <option>Masculino</option>
+          <option>Femenino</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="Correo electrónico" class="form-label">Correo electrónico</label>
+        <input type="text" class="form-control" name="email" id="Correo electrónico" placeholder="uni@gmail.com">
+      </div>
+
+      <div class="col-md-6">
+        <label for="numero" class="form-label">Número de teléfono</label>
+        <input type="text" class="form-control" name="numeroTlf" id="numeroTlf" >
+      </div>
+
+      <div class="col-md-6">
+        <label for="idioma" class="form-label">idioma</label>
+        <input type="text" class="form-control" name="idioma" id="idioma" >
+      </div>
+      
+
+      <div class="col-md-3">
+        <label for="fechaDeAlta" class="form-label">fechaDeAlta</label>
+        <input type="date" class="form-control" id="fechaDeAlta" name="fechaDeAlta" max="2023-03-18" min="1900-01-01" required>
+      </div>
+
+
+      <div class="col-md-3">
+        <label for="fechaDeBaja" class="form-label">fechaDeBaja</label>
+        <input type="date" class="form-control" id="fechaDeBaja" name="fechaDeBaja" max="2023-03-18" min="1900-01-01" required>
+      </div>
+
+      <div class="col-md-3">
+        <label for="inputState" class="form-label">orientacionSexual</label>
+        <select name="orientacionSexual" id="inputState" class="form-select">
+          <option selected>Sin especificar</option>
+          <option>hetero</option>
+          <option>homo</option>
+        </select>
+      </div>
+
+      <div class="col-md-3">
+        <label for="inputState" class="form-label">activo</label>
+        <input type="number" name="activo">
+      </div>
+      
+
+
+      <div class="col-md-6">
+        <label for="redesSociales" class="form-label">redesSociales</label>
+        <input type="text" class="form-control" name="redesSociales" id="redesSociales" >
+      </div>
+
+
+      <div class="col-md-6">
+        <label for="metodoPago" class="form-label">metodoPago</label>
+        <input type="text" class="form-control" name="metodoPago" id="metodoPago" >
+      </div>
+
+
+
+      <div class="col-md-3">
+        <label for="inputState" class="form-label">Color de Pelo</label>
+        <select name="colorPelo" id="inputState" class="form-select">
+          <option selected>Sin especificar</option>
+          <option>Negro</option>
+          <option>Castaño</option>
+          <option>Rubio</option>
+          <option>Rojo</option>
+          <option>Blanco</option>
+          <option>Gris</option>
+        </select>
+      </div>
+
+      <div class="col-md-3">
+        <label for="inputState" class="form-label">Color de ojos</label>
+        <select id="inputState" name="colorOjos" class="form-select">
+          <option selected>Sin especificar</option>
+          <option>Negros</option>
+          <option>Castaño</option>
+          <option>Azules</option>
+          <option>Verdes</option>
+          <option>Grises</option>
+        </select>
+      </div> 
+      <div class="col-md-6">
+        <label for="inputState" class="form-label">Biografia</label>
+        <textarea name="biografia" id="inputState" cols="40" rows="5"></textarea>
+      </div>
+      <div class="col-md-6">
+        <label for="inputAddress" class="form-label">Dirección</label>
+        <input type="text" class="form-control" name="direccionId" id="inputAddress" placeholder="calle Larios nº6">
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            Quiero recibir anuncios e información sobre Ez-Dates a mi correo electrónico
+          </label>
+        </div>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Registrarme</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>

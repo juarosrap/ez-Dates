@@ -1,0 +1,86 @@
+/*HEADER*/
+div.navigation>a {
+    color: white;
+    font-size: 120%;
+    background-color: brown;
+    font-family: monospace;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 150px;
+  }
+  
+  /*Logo*/
+  .navbar-brand{
+    font-family: 'Tilt Warp', cursive;
+    font-size: 160%;
+  }
+  
+  .nav-link dropdown-toggle:hover, .nav-link a:hover, nav-link active:hover {
+    color: white;
+    opacity: 0.6;
+  }
+
+  nav.navbar {
+    background-color: #EF4765;
+  }
+  
+  .dropdown-item{
+    color: #EF4765;
+  }
+  
+  .nav-link dropdown-toggle:hover, .nav-link:hover, nav-link active:hover {
+    color: white;
+    opacity: 0.6;
+  }
+  
+  .dropdown-item:hover{
+    background-color: #EF4765;
+    color: white;
+    opacity: 0.6;
+  }
+  
+  nav.navbar a {
+    color: rgb(255, 255, 255);
+  }
+
+  .btn-filter{
+    margin-top: 10px;
+  }
+  
+  
+  .btn-filter {
+    background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+border: 0;
+border-radius: 12px;
+color: #FFFFFF;
+cursor: pointer;
+display: inline-block;
+font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+font-size: 16px;
+font-weight: 500;
+line-height: 2.5;
+outline: transparent;
+padding: 0 1rem;
+text-align: center;
+text-decoration: none;
+transition: box-shadow .2s ease-in-out;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+white-space: nowrap;
+  }
+
+/*HEADER*/
+  .filtrar {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  form {
+    margin: auto;
+    width: fit-content;
+  }

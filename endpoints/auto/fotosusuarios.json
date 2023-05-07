@@ -1,0 +1,12 @@
+{
+    "getAll": {
+        "description": "Gets all entries from 'fotosusuarios'",
+        "route": "/fotosusuarios",
+        "method": "GET",
+        "sql": "SELECT * FROM fotosusuarios",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ]
+    }
+}

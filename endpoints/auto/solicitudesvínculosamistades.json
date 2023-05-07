@@ -1,0 +1,12 @@
+{
+    "getAll": {
+        "description": "Gets all entries from 'solicitudesv\u00ednculosamistades'",
+        "route": "/solicitudesv\u00ednculosamistades",
+        "method": "GET",
+        "sql": "SELECT * FROM solicitudesv\u00ednculosamistades",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ]
+    }
+}

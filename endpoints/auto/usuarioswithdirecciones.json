@@ -1,0 +1,12 @@
+{
+    "getAll": {
+        "description": "Gets all entries from 'usuarioswithdirecciones'",
+        "route": "/usuarioswithdirecciones",
+        "method": "GET",
+        "sql": "SELECT * FROM usuarioswithdirecciones",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ]
+    }
+}
